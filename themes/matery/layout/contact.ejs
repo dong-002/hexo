@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/css/style.css" /> -->
 <link rel="stylesheet" type="text/css" href="/css/barrager.css">
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/jquery/jquery.min.js"></script>
+<script src="../source/libs/valine/av-min.js"></script>
+<script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/js/jquery.barrager.js"></script>
 
 <%- partial('_partial/bg-cover') %>
@@ -20,6 +20,9 @@
     p{
         text-align: center;
     }
+    #vcomments p {
+        text-align: left;
+    }
 </style>
 <main class="content">
     <div id="contact" class="container chip-container">
@@ -35,11 +38,11 @@
                 <p>
                     <b>畅所欲言</b><br>
                     <b>在这里可以留下你的足迹，欢迎在下方留言，欢迎交换友链</b><br>
-                    <b>友链信息</b><br>
+                    <!-- <b>友链信息</b><br> -->
                     <b>博客名称: <%- config.title %></b><br>
                     <b>博客网址: <%- config.url %></b><br>
-                    <b>博客头像: <%- config.url %>/medias/logo.png</b><br>
-                    <b>博客介绍: 犹豫就会败北</b><br>
+                    <!-- <b>博客头像: <%- config.url %>/medias/logo.png</b><br> -->
+                    <b>博客介绍: 努力吧，少年</b><br>
                 </p>
                 <div class="container">
                     <section id="custom" class="bb-section">
@@ -133,6 +136,9 @@
 
         <!--其他评论card-->
         <div class="card">
+            <% if (theme.valine && theme.valine.enable) { %>
+                <%- partial('_partial/valine') %>
+                <% } %>
             <% if (theme.gitalk && theme.gitalk.enable) { %>
                 <%- partial('_partial/gitalk') %>
             <% } %>
