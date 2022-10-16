@@ -130,5 +130,7 @@ theme: matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/dong-002/dong-002.github.io.git
+  repository: 
+    github: https://github.com/dong-002/dong-002.github.io.git
+    tencent_cloud: git@175.178.147.180:/home/git/blog.git
   branch: master
