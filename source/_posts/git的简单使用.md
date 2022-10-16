@@ -19,7 +19,7 @@ git config --global user.email "邮箱"
 
 * 生成密钥： `ssh-keygen -t rsa` 输入之后按下三次回车
 
-  ![image-20220726230657692](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230657692.png)
+  ![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230657692.png)
 
 * 查看密钥： `cat ~/.ssh/id_rsa.pub`
 
@@ -27,7 +27,7 @@ git config --global user.email "邮箱"
 
 * Gitee中的ssh公钥：登录码云，将上面的密钥复制到ssh公钥中
 
-  ![image-20220726230757326](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230757326.png)
+  ![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230757326.png)
 
   这样本地仓库就和Gitee绑定了。
 
@@ -35,7 +35,7 @@ Git的仓库可以从其他服务器上克隆一个或者将本地的一个文�
 
 * 克隆：git clone +远程仓库地址。将Gitee中的仓库地址复制，这样就把远程仓库复制到了本地
 
-  ![image-20220726230808406](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230808406.png)
+  ![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230808406.png)
 
   * 新的仓库：
     1. 首先 git init 将本地仓库初始化
@@ -55,7 +55,7 @@ Git的仓库可以从其他服务器上克隆一个或者将本地的一个文�
 
 6. 查看提交记录：`git log`
 
-   ![image-20220726230814664](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230814664.png)
+   ![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220726230814664.png)
 
    上面划线的是提交版本ID
 

@@ -12,7 +12,7 @@ npm是一个包管理工具，所谓的包也就是第三方模块，好比如jQ
 
 在新建项目时在项目根目录用终端执行npm init -y来创建一个package.json文件，这个文件用来记录这个项目用到了哪些包，这些包都在node_modules文件中存放。
 
-![image-20220731171811789](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731171811789.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731171811789.png)
 
 #### 下载包
 
@@ -20,7 +20,7 @@ npm是一个包管理工具，所谓的包也就是第三方模块，好比如jQ
 
 package.json文件中的dependencies记录了下载了哪些包和版本号，例如下面就是用到了jQuery包。
 
-![image-20220731172100367](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731172100367.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731172100367.png)
 
 #### 存放到Dev
 
@@ -28,7 +28,7 @@ package.json文件中的dependencies记录了下载了哪些包和版本号，�
 
 使用npm i 包名 -D这样就会自动把包放到Dev节点中。
 
-![image-20220731172943102](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731172943102.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731172943102.png)
 
 #### 删除包
 
@@ -44,6 +44,6 @@ package.json文件中的dependencies记录了下载了哪些包和版本号，�
 
 将镜像源改为淘宝镜像 `npm config set registry=https://registry.npm.taobao.org/`
 
-![image-20220731174912803](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731174912803.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220731174912803.png)
 
 将镜像源切换为国内之后下载速度就会提高。

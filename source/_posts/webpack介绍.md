@@ -12,11 +12,11 @@ webpack是一个可以将项目进行规范化、将项目打包压缩的工具
 
 里面有两个参数可选，development在开发的时候用打包速度快 production在发布的时候使用 可以进行压缩 体积小
 
-![image-20220810001403153](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810001403153.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810001403153.png)
 
 然后再package.json中找到scripts节点，添加如下属性
 
-![image-20220810001609715](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810001609715.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810001609715.png)
 
 在终端中运行`npm run dev`命令，这样项目就自动打包，将src中的index.js的文件打包放到dist中的main.js中。可以在webpack.config.js文件中配置要打包的文件和放到哪里。
 
@@ -26,7 +26,7 @@ webpack是一个可以将项目进行规范化、将项目打包压缩的工具
 
 每次修改代码都要重新执行`npm run dev`这样很麻烦，可以安装插件当代码改变是自动执行，`npm i webpack-dev-server -D`下载插件然后再package.json中dev加多一个如下配置，但是要在http://localhost:8080/中打开。**并且HTML中引入的连接改为/index.js**，这是因为新生成的index.js在内存中，不在磁盘上。
 
-![image-20220810164843354](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810164843354.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810164843354.png)
 
 #### html-webpack-plugin
 
@@ -69,7 +69,7 @@ module.exports={
 
 webpack只能处理js文件，其他不是js的文件不能处理，要通过loader进行打包处理。
 
-所有的css,less文件不在index.html文件中引入，在index.js文件import引入，然后通过loader和webpack处理会自动引入到index.html文件中。![image-20220810214101643](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810214101643.png)
+所有的css,less文件不在index.html文件中引入，在index.js文件import引入，然后通过loader和webpack处理会自动引入到index.html文件中。![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220810214101643.png)
 
 打包css文件：`npm i style-loader css-loader -D`下载插件，然后在webpack.config.js文件中加多一个节点
 
@@ -129,7 +129,7 @@ module.exports={
 
 项目完成后要将项目进行发布，在package.json中配置如下，--mode production指的是将代码压缩，然后执行`npm run build`，在根目录下出现一个dist文件夹里面是进行压缩的文件。`npm run dev`是在开发阶段使用，添加**serve**打包的代码会存储在内存中，build属性中没有serve，执行`npm run bulid`会在磁盘上生成dist文件夹。
 
-![image-20220811002432483](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220811002432483.png)
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/image-20220811002432483.png)
 
 #### source-map
 
