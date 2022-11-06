@@ -66,27 +66,38 @@ categories: 前端
 
 在使用element-plus的时候有全部导入和按需导入，在按需导入的时候出现了一些问题，记录一下。
 
-首先创建vite.config.js文件，然后按照官网配置
+首先创建vite.config.js文件，然后按照官网配置，这里只是一部分。
 
 ```js
 import { defineConfig } from 'vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-//这个包也要下载
 import vue from '@vitejs/plugin-vue'
-
+import path from 'path'
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    // 这里是一定要的
-    vue(),
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
-    }),
-    Components({
-      resolvers: [ElementPlusResolver()],
-    }),
-  ],
+  plugins: [vue()],//用到的插件数组
+  server: {
+    hmr: true,
+    port: 3001,
+    strictPort: false, //false 端口被占用继续尝试下一个端口
+    cors: true, //开启跨域请求
+    open: true, //浏览器自动开启
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8081/', //目标代理接口
+        secure: false,
+        changeOrigin: true, //开启代理，本地创建一个虚拟服务器
+        pathRewrite: {
+          '^/api': '/api'
+        }
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname,'./src') //将src路径变为@
+    }
+  }
+  
 })
 
 ```

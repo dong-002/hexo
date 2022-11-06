@@ -80,6 +80,8 @@ Git的仓库可以从其他服务器上克隆一个或者将本地的一个文�
 
 13. 忽略文件：创建一个名为.gitignore的文件，在这个文件中定义不用提交的文件，提交时就不会提交对应的文件。
 
+13. 查看连接的远程仓库：`git remote -v`
+
 #### 分支操作
 
 开发项目时首先在master主分支创建自己的分支，自己负责的部分完成后将自己的分支合并到master主分支，这样每个人的工作没有相互影响。
@@ -98,3 +100,11 @@ Git的仓库可以从其他服务器上克隆一个或者将本地的一个文�
 * 查看远程分支：git remote show
 * 将远程分支下载到本地：git checkout 分支名
 * 删除远程分支：git push origin --delete 分支名
+
+#### pull操作
+
+`git pull`是从GitHub上下拉代码到本地仓库。`git clone`不也是可以从仓库中下载代码吗？这两者是有区别的，`git pull`是当你连接了仓库时可以使用，`git pull`是下拉最新的代码到本地；`git clone`是可以从所有仓库下载代码，就算你没有连接上仓库。
+
+下面有一个`git pull`的使用场景
+
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/%E7%A9%BA%E7%99%BD.png)

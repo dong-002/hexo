@@ -132,5 +132,6 @@ deploy:
   type: git
   repository: 
     github: https://github.com/dong-002/dong-002.github.io.git
+    #这里添加了服务器 每次上传要输入密码
     tencent_cloud: git@175.178.147.180:/home/git/blog.git
   branch: master
