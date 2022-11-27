@@ -105,6 +105,8 @@ Git的仓库可以从其他服务器上克隆一个或者将本地的一个文�
 
 `git pull`是从GitHub上下拉代码到本地仓库。`git clone`不也是可以从仓库中下载代码吗？这两者是有区别的，`git pull`是当你连接了仓库时可以使用，`git pull`是下拉最新的代码到本地；`git clone`是可以从所有仓库下载代码，就算你没有连接上仓库。
 
-下面有一个`git pull`的使用场景
+下面有一个`git pull`的使用场景：
 
-![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/%E7%A9%BA%E7%99%BD.png)
+如果小红和小明在同一家公司写同一个项目，他们负责项目的不同部分，小明在写代码之前要pull同步一下小红的代码才能继续写自己的。
+
+![](https://dong-image.oss-cn-guangzhou.aliyuncs.com/image/git%20pull.drawio.png)
